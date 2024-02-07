@@ -37,8 +37,39 @@ ass Person:
   nationality = "French"
   hobby = "Cooking"
 ```
+## Creating Instances
+When we create variables from class template, we're creating <b>instances</b>.
+
+1. We start by creating a variable:
+```
+class VirtualPet:
+  color = "brown"
+
+fluffy = 
+```
+2. We add the class name and parentheses to create it:
+```
+class VirtualPet:
+  color = "brown"
+
+fluffy = VirtualPet()
+```
+The class VirtualPet is <b>a definition</b> and fluffy variable is <b>an instance </b>.
+
+### How to access a class variable
+
+We add the instance name, a <b>.</b> and the name of the variable we want.
+```
+class VirtualPet:
+  wagging_tail = True
+  color = "brown"
+
+skippy = VirtualPet()
+print(skippy.wagging_tail) #instance name . variable name
+```
 
 ## Classes with Methods
+
 
 ## Constructors
 
