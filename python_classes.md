@@ -69,8 +69,48 @@ print(skippy.wagging_tail) #instance name . variable name
 ```
 
 ## Classes with Methods
+Classes can have functions too, which are known as <b>methods</b> when they are inside of a class.
+```
+class Virtual_Pet:
+  color = "brown"
 
+  def bark(self):
+    print("Bark")
 
+rocky = Virtual_Pet()
+rocky.bark()
+```
+<b>self</b> is a special keyword that we need to use inside our class definition. We pass it as the first parameter to all the methods we add so we can access the class variables inside the methods. We need <b>self</b> as the class variables are declared outside of the class method's scope.
+```
+class Virtual_Pet:
+  color = "brown"
+
+  def bark(self):
+    print("Bark")
+
+  def display_color(self):
+    print(self.color) #that's how we access variable color
+
+  def display_legs(self):
+    print(self.legs)
+
+rocky = Virtual_Pet()
+rocky.display_color()
+rocky.display_legs()
+```
+### How to use a class method
+It's the same as using a class variable, except we need to add parentheses:
+```
+class Virtual_Pet:
+  color = "brown"
+
+  def bark(self):
+    print("Bark")
+
+rocky = Virtual_Pet()
+print(rocky.color)
+rocky.bark() # () is a key!
+```
 ## Constructors
 
 <b> constructor method</b> - a method that is more flexible when creating different instances from a class, it looks like:
