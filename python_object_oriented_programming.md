@@ -127,3 +127,27 @@ class Car:
       self.ingniteFuel()
 ```
 <b> Abstraction</b> allows other developers to use a class without having to know what low-level methods it has or how they even work.
+
+## Polymorphic Objects
+A subclass can override the methods it inherits from its superclass. We simply set the same name method on the subclass. <b>Polymorphism</b> ensures that the proper method will be executed based on the calling object's class.
+
+```
+class Feline :
+  def speak(self):
+    print("Meow")
+
+class Cat(Feline):
+  def lick(self):
+    print("Licking paw")   
+
+class Lion(Feline):
+  def prey(self):
+    print("Pounces on prey") 
+  def speak (self):
+    print("Roar!")
+
+cat = Cat()
+cat.speak()
+lion = Lion()
+lion.speak()   
+```
