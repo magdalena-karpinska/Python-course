@@ -106,3 +106,24 @@ class Student(Person):
 - <b>super</b> refers to Studen't parent class - Person. <br>
 - <b>__init__</b> refers to Person's constructor. This allows us to use the existing constructor to set the name and age properties.
 
+## Abstracting objects
+We implement abstraction in OOP by writing a few core functions that hande all of the low-leel work. 
+
+```
+class Car:
+  def __init__(self):
+    self.on = False
+
+  def injectFuel(self):
+    print("Spraying fuel")
+
+  def igniteFuel(self):
+    print("Boom!")
+
+  def startUp(self):
+    self.on = True
+    while self.on:
+      self.injectionFuel()
+      self.ingniteFuel()
+```
+<b> Abstraction</b> allows other developers to use a class without having to know what low-level methods it has or how they even work.
