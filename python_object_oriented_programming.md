@@ -33,7 +33,7 @@ h = 2
 distance = getDistance(mph, h)
 print(distance)
 ```
-In <b>object-oriented_programming (OOP)</b>, we group data and functionality as properties and methods inside objects:
+In <b>object-oriented_programming (OOP)</b>, we group data and functionality as properties and methods inside objects, which is called <b>encapsulation</b>:
 ```
 class Virtual_Pet:  #Virtual_Pet is and object
   def __init__ (self, color, name):
