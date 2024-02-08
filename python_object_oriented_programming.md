@@ -55,4 +55,54 @@ class Dog:
   def eat(self):
     self.hungry = False
 ```
+## Applying Inheritance in OOP
+We use <b>inheritance</b> to make our code efficient. Through inheritance, classes receive methods from other classes.<br>
+
+Inheritance lets us create classes that have different properties and behaviours without coding each one from scratch. 
+```
+class Parent:
+  def __init__(self):
+    self.eyes = "green"
+
+class Child(Parent):  # Child class is inheriting the Parent class
+  def __init__(self):
+    super().__init__()
+    self.age = 7
+
+child = Child()
+print(child.eyes)
+pint(child.age)
+```
+### How a class inherits methods from another
+1. When defining the class we add parentheses with the class that we're inheriting:
+```
+class Greetings:
+  def greet(self):
+    print("Hi!")
+
+class Person(Greetings):
+  name = "George"
+
+  p = Person()
+  p.greet()
+```
+The Person class can now use the Greeting's methods like its own.
+
+2. In:
+```
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def greet(self):
+    print("Hi!")
+
+class Student(Person):
+  def __init__(self, name, age, major):
+    super().__init__(name, age)
+    self.major = major
+```
+- <b>super</b> refers to Studen't parent class - Person. <br>
+- <b>__init__</b> refers to Person's constructor. This allows us to use the existing constructor to set the name and age properties.
 
