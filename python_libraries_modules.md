@@ -173,3 +173,8 @@ print(even_betwen)
 # Output
 [ 4 6 8 10]
 ```
+To round up numbers with math module:
+```
+import math
+print(math.ceil(65.9))
+```
